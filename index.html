@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="slider.js" defer></script>
+    <script src="form.js" defer></script>
+</head>
+<body>
+    <header id="top">
+        <img src="1ogo.png" alt="Логотип сайта 5uchn34tk1d">
+    </header>
+
+    <main id="gallery">
+        <h1>Галерея</h1>
+        <div id="slider-box">
+            <button id="prev-button" type="button" aria-label="Назад">&larr;</button>
+            <div id="slider">
+                <div id="slider-line">
+                    <img src="1.jpg" alt="Фото 1">
+                    <img src="2.jpg" alt="Фото 2">
+                    <img src="3.jpg" alt="Фото 3">
+                    <img src="4.jpg" alt="Фото 4">
+                    <img src="5.jpg" alt="Фото 5">
+                    <img src="6.jpg" alt="Фото 6">
+                    <img src="7.jpg" alt="Фото 7">
+                    <img src="8.jpg" alt="Фото 8">
+                </div>
+            </div>
+            <button id="next-button" type="button" aria-label="Вперёд">&rarr;</button>
+        </div>
+        <div id="pager"></div>
+        <button id="feedback-button" type="button">Обратная связь</button>
+    </main>
+
+    <dialog id="feedback-dialog" aria-labelledby="feedback-title">
+        <form id="feedback-form" action="https://formcarry.com/s/DDjmtOP_Ibv" method="post">
+            <div id="feedback-head">
+                <h2 id="feedback-title">Обратная связь</h2>
+                <button id="close-button" type="button" aria-label="Закрыть">&times;</button>
+            </div>
+            <label for="field-name">ФИО</label>
+            <input id="field-name" name="name" type="text" autocomplete="name" required>
+            <label for="field-email">Email</label>
+            <input id="field-email" name="email" type="email" autocomplete="email" required>
+            <label for="field-phone">Телефон</label>
+            <input id="field-phone" name="phone" type="tel" autocomplete="tel">
+            <label for="field-organization">Организация</label>
+            <input id="field-organization" name="organization" type="text" autocomplete="organization">
+            <label for="field-message">Сообщение</label>
+            <textarea id="field-message" name="message" rows="2" required></textarea>
+            <label id="consent-label" for="field-consent">
+                <input id="field-consent" name="consent" type="checkbox" value="yes" required>
+                Согласен с политикой обработки персональных данных
+            </label>
+            <button id="submit-button" type="submit">Отправить</button>
+            <p id="error" role="alert" hidden></p>
+            <p id="result" role="status" hidden></p>
+        </form>
+    </dialog>
+
+    <footer>
+        <p> (c) Саенко М. ^_^</p>
+    </footer>
+</body>
+</html>

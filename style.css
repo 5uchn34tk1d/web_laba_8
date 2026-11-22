@@ -1,0 +1,268 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    line-height: normal;
+    color: #000000;
+    background-color: #ffffff;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#top {
+    background-color: #e31313;
+    padding: 8px 12px;
+    text-align: center;
+}
+
+#top img {
+    width: 100px;
+    height: 100px;
+    margin: 8px;
+}
+
+nav {
+    background-color: #ffffff;
+    color: #e31313;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+    padding: 8px;
+    margin: 24px 0;
+}
+
+main {
+    flex-grow: 1;
+    padding: 0 12px;
+}
+
+h1 {
+    font-size: 2em;
+    font-weight: bold;
+    line-height: normal;
+    margin: 16px 0 8px;
+}
+
+a {
+    color: #e31313;
+}
+
+input,
+select,
+button {
+    font-family: inherit;
+    font-size: 1em;
+}
+
+#error,
+#result {
+    margin: 16px 0 0;
+}
+
+#error {
+    color: #e31313;
+}
+
+#slider-box {
+    display: flex;
+    align-items: center;
+    margin: 16px 0 0;
+}
+
+#slider {
+    flex: 1;
+    overflow: hidden;
+}
+
+#slider-line {
+    display: flex;
+    transition: transform 0.3s;
+}
+
+#slider-line img {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+}
+
+#prev-button,
+#next-button {
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    color: #ffffff;
+    background-color: #e31313;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#pager {
+    text-align: center;
+    margin: 16px 0 0;
+}
+
+#pager button {
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin: 0 4px;
+    border: 2px solid #e31313;
+    border-radius: 50%;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+#pager button.active {
+    background-color: #e31313;
+}
+
+footer {
+    background-color: #e31313;
+    height: 60px;
+    padding: 8px 12px;
+}
+
+footer p {
+    color: #ffffff;
+    margin: 16px 0 0;
+}
+
+@media (min-width: 768px) {
+    #top {
+        display: flex;
+        align-items: center;
+        text-align: left;
+    }
+
+    nav {
+        flex: 0 0 50%;
+        margin: 24px auto;
+    }
+
+    #slider-line img {
+        flex: 0 0 33.333%;
+    }
+}
+
+/* Задание 8: форма обратной связи */
+#feedback-button {
+    padding: 8px 16px;
+    margin: 16px 0;
+    border: none;
+    color: #ffffff;
+    background-color: #e31313;
+    cursor: pointer;
+}
+
+#feedback-dialog {
+    width: calc(100% - 24px);
+    max-width: 480px;
+    max-height: 100dvh;
+    padding: 12px;
+    border: 4px solid #e31313;
+    color: #000000;
+    background-color: #ffffff;
+    font-family: inherit;
+}
+
+#feedback-dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#feedback-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#feedback-head h2 {
+    font-size: 1.25em;
+    margin: 0;
+}
+
+#close-button {
+    flex: 0 0 32px;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: none;
+    color: #ffffff;
+    background-color: #e31313;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#feedback-form label {
+    display: block;
+    font-size: 14px;
+    margin: 6px 0 2px;
+}
+
+#feedback-form input[type="text"],
+#feedback-form input[type="email"],
+#feedback-form input[type="tel"],
+#feedback-form textarea {
+    width: 100%;
+    padding: 4px 8px;
+    border: 2px solid #e31313;
+    background-color: #ffffff;
+}
+
+#feedback-form textarea {
+    resize: none;
+}
+
+#feedback-form #consent-label {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+}
+
+#field-consent {
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    margin: 0 8px 0 0;
+    accent-color: #e31313;
+}
+
+#submit-button {
+    width: 100%;
+    height: 36px;
+    border: none;
+    color: #ffffff;
+    background-color: #e31313;
+    cursor: pointer;
+}
+
+#submit-button:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+#feedback-form #error,
+#feedback-form #result {
+    margin: 8px 0 0;
+}
+
+@media (min-width: 768px) {
+    #feedback-dialog {
+        padding: 24px;
+    }
+
+    #feedback-form label {
+        margin: 12px 0 4px;
+    }
+
+    #feedback-form textarea {
+        height: 96px;
+    }
+}
