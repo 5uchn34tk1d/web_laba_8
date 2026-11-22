@@ -19,14 +19,11 @@ body {
     text-align: center;
 }
 
-#slider-line img {
-    flex: 0 0 100%;
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border: 4px solid #ffffff;
+#top img {
+    width: 100px;
+    height: 100px;
+    margin: 8px;
 }
-
 nav {
     background-color: #ffffff;
     color: #e31313;
@@ -88,7 +85,7 @@ button {
 #slider-line img {
     flex: 0 0 100%;
     width: 100%;
-    height: 200px;
+    height: 400px;
     object-fit: cover;
     border: 4px solid #ffffff;
 }
