@@ -19,10 +19,12 @@ body {
     text-align: center;
 }
 
-#top img {
-    width: 100px;
-    height: 100px;
-    margin: 8px;
+#slider-line img {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border: 4px solid #ffffff;
 }
 
 nav {
